@@ -608,14 +608,4 @@ io.on('connection', (socket) => {
 // Starta servern
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});// Lägg till detta i server.js
-const path = require('path');
-
-// Serve static files from React app
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-  
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-  });
-}
+});
