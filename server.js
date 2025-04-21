@@ -12,14 +12,6 @@ app.use(cors({
   methods: ["GET", "POST"]
 }));
 
-// Konfigurera för produktion
-// if (process.env.NODE_ENV === 'production') {
- // app.use(express.static(path.join(__dirname, 'client/build')));
-  //app.get('*', (req, res) => {
-   // res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  //});
-// }
-
 const io = new Server(server, {
   cors: {
     origin: "*", // Allows all origins in development
